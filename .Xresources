@@ -21,4 +21,5 @@ xterm*color15: #d0d0d0
 xterm*faceName: DejaVu Sans Mono
 xterm*faceSize: 11
 xterm*rightScrollBar: true
+xterm*eightBitInput: false
 Emacs.font: DejaVu Sans Mono-11
