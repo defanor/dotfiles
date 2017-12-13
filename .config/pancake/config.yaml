@@ -55,6 +55,7 @@ unclutter:
   hacker-news: ^https://news\.ycombinator\.com/((news|show|ask).*)?$
   duckduckgo: ^https://duckduckgo.com/lite/\?q=
   lobsters: ^https://lobste.rs/((page|recent|newest).*)?$
+  github-project: ^https://github.com/[^/]+/[^/]+/?$
 defaultCommand: ! 'curl --compressed -4 -L -w "
 
   -pancake-
