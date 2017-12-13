@@ -1,0 +1,68 @@
+externalViewers:
+  ogg: xdg-open "${FILE}"
+  xspf: xdg-open "${FILE}"
+  jpg: xdg-open "${FILE}"
+  cabal: emacsclient -n "${FILE}"
+  jpeg: xdg-open "${FILE}"
+  gif: xdg-open "${FILE}"
+  hs: emacsclient -n "${FILE}"
+  mp3: xdg-open "${FILE}"
+  el: emacsclient -n "${FILE}"
+  idr: emacsclient -n "${FILE}"
+  mpeg: xdg-open "${FILE}"
+  svg: xdg-open "${FILE}"
+  pdf: xdg-open "${FILE}"
+  scm: emacsclient -n "${FILE}"
+  webm: xdg-open "${FILE}"
+  h: emacsclient -n "${FILE}"
+  wav: xdg-open "${FILE}"
+  mkv: xdg-open "${FILE}"
+  c: emacsclient -n "${FILE}"
+  m3u: xdg-open "${FILE}"
+  ogv: xdg-open "${FILE}"
+  mp4: xdg-open "${FILE}"
+  png: xdg-open "${FILE}"
+indentDivs: false
+commands:
+  gopher: ! 'curl "${URI}" -w "
+
+    -pancake-
+
+    "'
+  ssh: ! 'scp "${URI_REGNAME}:${URI_PATH}" /dev/stdout && echo -e ''
+
+    -pancake-'''
+  web-archive: ! 'curl --compressed -4 -L -w "
+
+    -pancake-
+
+    uri: %{url_effective}
+
+    type: %{content_type}
+
+    " "$(curl "https://archive.org/wayback/available${URI_QUERY}" | jq -r ''.archived_snapshots.closest.url'')"'
+referenceDigits: 'rstwfpxcvaqzdgb'
+shortcuts:
+  g: https://m.gutenberg.org/ebooks/search.mobile/?query=
+  ddg: https://duckduckgo.com/lite/?q=
+  wt: https://en.m.wiktionary.org/w/index.php?search=
+  wa: web-archive:///?url=
+  wp: https://en.m.wikipedia.org/wiki/Special:Search?search=
+  gp: gopher://gopherpedia.com:70/7/lookup?
+  vs: gopher://gopher.floodgap.com/7/v2/vs?
+  xiph: http://dir.xiph.org/search?search=
+unclutter:
+  hacker-news: ^https://news\.ycombinator\.com/((news|show|ask).*)?$
+  duckduckgo: ^https://duckduckgo.com/lite/\?q=
+  lobsters: ^https://lobste.rs/((page|recent|newest).*)?$
+defaultCommand: ! 'curl --compressed -4 -L -w "
+
+  -pancake-
+
+  uri: %{url_effective}
+
+  type: %{content_type}
+
+  " "${URI}"'
+historyDepth: 100
+paginate: true
