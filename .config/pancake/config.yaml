@@ -51,11 +51,14 @@ shortcuts:
   gp: gopher://gopherpedia.com:70/7/lookup?
   vs: gopher://gopher.floodgap.com/7/v2/vs?
   xiph: http://dir.xiph.org/search?search=
+  hoogle: https://www.haskell.org/hoogle/?hoogle=
 unclutter:
   hacker-news: ^https://news\.ycombinator\.com/((news|show|ask).*)?$
-  duckduckgo: ^https://duckduckgo.com/lite/\?q=
-  lobsters: ^https://lobste.rs/((page|recent|newest).*)?$
-  github-project: ^https://github.com/[^/]+/[^/]+/?$
+  duckduckgo: ^https://duckduckgo\.com/lite/\?q=
+  lobsters: ^https://lobste\.rs/((page|recent|newest).*)?$
+  github-project: ^https://github\.com/[^/]+/[^/]+/?$
+  hoogle: ^https://www\.haskell\.org/hoogle/\?hoogle=
+  hackage-haddock: ^https?://hackage\.haskell\.org/package/[^/]+/docs/[^/]+$
 defaultCommand: ! 'curl --compressed -4 -L -w "
 
   -pancake-
