@@ -59,6 +59,7 @@ unclutter:
   github-project: ^https://github\.com/[^/]+/[^/]+/?$
   hoogle: ^https://www\.haskell\.org/hoogle/\?hoogle=
   hackage-haddock: ^https?://hackage\.haskell\.org/package/[^/]+/docs/[^/]+$
+  mediawiki: ^https://en\.(m.)?(wiktionary|wikipedia)\.org/wiki/
 defaultCommand: ! 'curl --compressed -4 -L -w "
 
   -pancake-
