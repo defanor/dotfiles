@@ -56,7 +56,7 @@ unclutter:
   hacker-news: ^https://news\.ycombinator\.com/((news|show|ask).*)?$
   duckduckgo: ^https://duckduckgo\.com/lite/\?q=
   lobsters: ^https://lobste\.rs/((page|recent|newest).*)?$
-  github-project: ^https://github\.com/[^/]+/[^/]+/?$
+  github: ^https://github\.com/
   hoogle: ^https://www\.haskell\.org/hoogle/\?hoogle=
   hackage-haddock: ^https?://hackage\.haskell\.org/package/[^/]+/docs/[^/]+$
   mediawiki: ^https://en\.(m.)?(wiktionary|wikipedia)\.org/wiki/

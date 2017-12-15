@@ -3,7 +3,11 @@
   <xsl:output method="html" indent="yes"/>
   
   <xsl:template match="/">
-    <xsl:apply-templates select="//div[@id='content']" />
+    <html>
+      <body>
+        <xsl:apply-templates select="//div[@id='content']" />
+      </body>
+    </html>
   </xsl:template>
 
   <!-- Cut these out -->
