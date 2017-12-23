@@ -46,8 +46,8 @@ with vsync enabled in nvidia-settings:
   flashing
 - compton --backend xrender --vsync opengl --paint-on-overlay: same
 - compton --backend xrender --vsync opengl --dbe: same
-- compton --backend xrender -cf: eliminates the white flash, though a
-  bit slower; same as without -cf otherwise
+- compton --backend xrender -cf: hides (smoothes) the white flash,
+  though a bit slower; same as without -cf otherwise
 - with --vsync drm: "VBlank ioctl did not work, unimplemented in this
   drmver?"
 
@@ -71,9 +71,43 @@ do much of versioning or releases, or of other conventional things,
 but the package update date is 2014-10-16). I still don't see why this
 happens (would probably have to debug, or at least to try a newer
 version), but it does.
--}
-runCompton = spawnOnce "compton --backend xrender -cf"
 
+
+With "Full Composition Pipeline" enabled in nvidia-settings:
+
+Occasionally some kind of a phantom mouse cursor appears and blinks on
+top of emacs window now; can be erased by moving a real cursor through
+it. Sometimes it vanishes on its own. Happens with or without compton.
+
+- no compton: white flashes when switching to FF, fine otherwise (no
+  screen tearing in FF)
+- compton --backend xrender: same as without compton
+- compton --backend xrender -cf: hides (smoothes) the flashes.
+- compton --backend glx: no flashes, but screen tearing in emacs
+- compton --backend glx --paint-on-overlay: same (maybe the tearing
+  gets visible faster -- that is, worse)
+- compton --backend glx --vsync opengl: same
+- compton --backend glx --vsync opengl --paint-on-overlay: same
+- compton --backend glx --vsync opengl-swc --sw-opti: maybe slightly
+  better, but essentially the same
+
+A summary of the more common issues:
+
+@
+| issue / backend         | xrender     | glx    |
+|-------------------------+-------------+--------|
+| screen tearing in FF    | without FCP | never  |
+| screen tearing in emacs | never       | always |
+| phantom cursor          | with FCP    | ?      |
+| white flashes in FF     | always      | never  |
+@
+
+
+
+-}
+
+-- for some reason this doesn't seem to work anymore
+runCompton = spawnOnce "compton --backend xrender -cf"
 
 main = do
   -- This is awkward, but apparently there's no better standard way to

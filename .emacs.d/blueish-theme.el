@@ -30,6 +30,7 @@
 
  ;; ----------------- Frame stuff --------------------
  '(default ((((type graphic)) (:background "#091419" :foreground "#c0d0d6"))))
+ '(link ((t (:foreground "DarkSlateGray3"))))
  '(cursor  ((t (:background "#F8F8F0"))))
  '(hl-line ((t (:background "#666666"))))
  '(modeline ((t (:background "#183c66" :foreground "white"))))
