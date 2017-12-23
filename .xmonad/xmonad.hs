@@ -102,7 +102,24 @@ A summary of the more common issues:
 | white flashes in FF     | always      | never  |
 @
 
+Another custom config, with the following bits in it:
 
+@
+backend = "glx"
+refresh-rate = 0;
+vsync = "opengl-swc";
+dbe = false;
+paint-on-overlay = true;
+detect-transient = true;
+detect-client-leader = true;
+glx-copy-from-front = false;
+glx-swap-method = "undefined";
+@
+
+Apparently works on GTX 1070, but not here: getting weird quirks (not
+screen tearing or phantom cursor, but something else) in emacs window.
+Seems to be the same with and without FCP setting, though maybe a bit
+more laggy with FCP.
 
 -}
 
