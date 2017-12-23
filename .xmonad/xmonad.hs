@@ -73,7 +73,7 @@ happens (would probably have to debug, or at least to try a newer
 version), but it does.
 
 
-With "Full Composition Pipeline" enabled in nvidia-settings:
+With "Force Composition Pipeline" enabled in nvidia-settings:
 
 Occasionally some kind of a phantom mouse cursor appears and blinks on
 top of emacs window now; can be erased by moving a real cursor through
