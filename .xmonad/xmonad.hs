@@ -123,7 +123,6 @@ more laggy with FCP.
 
 -}
 
--- for some reason this doesn't seem to work anymore
 runCompton = spawnOnce "compton --backend xrender -cf"
 
 main = do
