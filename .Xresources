@@ -37,5 +37,32 @@ xterm*color14: #4eb4fa
 xterm*color7: #9999aa
 xterm*color15: #d0d0d0
 
-! emacs
+! Emacs: mostly duplicated here to avoid flashing.
 Emacs.font: DejaVu Sans Mono-11
+Emacs.default.attributeBackground: #091419
+Emacs.default.attributeForeground: #c0d0d6
+Emacs.cursor.attributeBackground: #f8f8f0
+Emacs.hl-line.attributeBackground: #666666
+! mode line
+Emacs.mode-line.attributeBackground: #183c66
+Emacs.mode-line.attributeForeground: #ffffff
+Emacs.mode-line.attributeBox: nil
+Emacs.mode-line-inactive.attributeBackground: #2f2f3b
+Emacs.mode-line-inactive.attributeForeground: #d0dfe6
+! fringe
+Emacs.fringe.attributeBackground: #14191f
+! minibuffer
+Emacs.minibuffer-prompt.attributeForeground: #ffffff
+! region selection
+Emacs.region.attributeForeground: #ffe792
+Emacs.region.attributeBackground: #1b232c
+! code highlighting
+Emacs.font-lock-builtin-face.attributeForeground: #6ee2ff
+Emacs.font-lock-comment-face.attributeForeground: #709999
+Emacs.font-lock-function-name-face.attributeForeground: #effbff
+Emacs.font-lock-keyword-face.attributeForeground: #748aa6
+Emacs.font-lock-string-face.attributeForeground: #6ea0d0
+Emacs.font-lock-variable-name-face.attributeForeground: #d0dfe6
+Emacs.font-lock-type-face.attributeForeground: #95cc5e
+Emacs.font-lock-warning-face.attributeForeground: #ffffff
+Emacs.font-lock-warning-face.attributeBold: true
