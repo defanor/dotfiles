@@ -56,6 +56,8 @@ Emacs.minibuffer-prompt.attributeForeground: #ffffff
 ! region selection
 Emacs.region.attributeForeground: #ffe792
 Emacs.region.attributeBackground: #1b232c
+! vertical bar
+Emacs.vertical-border.attributeForeground: #30303f
 ! code highlighting
 Emacs.font-lock-builtin-face.attributeForeground: #6ee2ff
 Emacs.font-lock-comment-face.attributeForeground: #709999

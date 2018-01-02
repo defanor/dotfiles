@@ -41,6 +41,7 @@
  '(minibuffer-prompt ((default (:foreground "white"))))
  ;; Highlight region color
  '(region ((t (:foreground "#FFE792" :background "#1b232c"))))
+ '(vertical-border ((t (:foreground "#30303f"))))
 
  ;; ---------------- Code Highlighting ---------------
  ;; Builtin
