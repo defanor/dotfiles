@@ -72,6 +72,10 @@
  '(w3m-form-button ((t (:background "#363b40" :foreground "#c0c4c8" :box (:line-width 2 :color "#202020" :style released-button)))))
  ;; w3m-haddock
  '(w3m-haddock-heading-face ((t (:background "#1b2025"))))
+ ;; idris-mode
+ '(idris-semantic-data-face ((t (:foreground "#f99"))))
+ '(idris-semantic-function-face ((t (:foreground "#de8"))))
+ '(idris-semantic-bound-face ((t (:foreground "#a9d"))))
  )
 
 
