@@ -1,0 +1,16 @@
+personalised.yaml is a basic ansible playbook to personalise the
+servers I work with, used with ansible 2.5.3.
+
+ssh-agent should be running, host_vars should be set with
+ansible-vault, e.g.:
+
+  ansible-vault create host_vars/example.com.yaml
+
+With contents such as:
+
+  ansible_become_password: examplepassword
+
+Invoked with:
+
+  ansible-playbook --ask-vault-pass ~/.ansible/personalised.yml
+

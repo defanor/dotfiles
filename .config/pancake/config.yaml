@@ -24,7 +24,7 @@ externalViewers:
   png: xdg-open "${FILE}"
 indentDivs: false
 commands:
-  gopher: ! 'curl "${URI}" -w "
+  gopher: ! 'torify curl "${URI}" -w "
 
     -pancake-
 
@@ -51,6 +51,7 @@ shortcuts:
   gp: gopher://gopherpedia.com:70/7/lookup?
   vs: gopher://gopher.floodgap.com/7/v2/vs?
   xiph: http://dir.xiph.org/search?search=
+  cs: http://citeseerx.ist.psu.edu/search?q=
   hoogle: https://www.haskell.org/hoogle/?hoogle=
 unclutter:
   hacker-news: ^https://news\.ycombinator\.com/((news|show|ask).*)?$
@@ -60,7 +61,7 @@ unclutter:
   hoogle: ^https://www\.haskell\.org/hoogle/\?hoogle=
   hackage-haddock: ^https?://hackage\.haskell\.org/package/[^/]+/docs/[^/]+$
   mediawiki: ^https://en\.(m.)?(wiktionary|wikipedia)\.org/wiki/
-defaultCommand: ! 'curl --compressed -4 -L -w "
+defaultCommand: ! 'curl -A "pancake/${PANCAKE}" --compressed -4 -L -w "
 
   -pancake-
 
@@ -71,3 +72,4 @@ defaultCommand: ! 'curl --compressed -4 -L -w "
   " "${URI}"'
 historyDepth: 100
 paginate: true
+pandocTimeout: 60

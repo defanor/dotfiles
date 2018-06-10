@@ -1,0 +1,19 @@
+- hosts: personalised
+  tasks:
+    - name: Ensure emacs is installed on CentOS
+      become: yes
+      yum:
+        name: emacs-nox
+        state: latest
+      when: ansible_os_family == "RedHat"
+    - name: Ensure emacs is installed on Debian
+      become: yes
+      apt:
+        name: emacs25-nox
+        state: latest
+      when: ansible_os_family == "Debian"
+    - name: Set emacs as EDITOR for myself
+      lineinfile:
+        path: ~/.profile
+        regexp: '^export EDITOR='
+        line: 'export EDITOR=emacs'
