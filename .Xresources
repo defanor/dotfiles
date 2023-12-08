@@ -5,7 +5,9 @@ Xft.hintstyle: hintmedium
 Xft.hinting: true
 
 ! xterm
-xterm*faceName: DejaVu Sans Mono
+XTerm.termName: xterm-256color
+! xterm*faceName: DejaVu Sans Mono
+xterm*faceName: Noto Sans Mono
 xterm*faceSize: 11
 xterm*rightScrollBar: true
 xterm*eightBitInput: false

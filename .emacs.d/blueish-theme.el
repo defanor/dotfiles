@@ -76,6 +76,24 @@
  '(idris-semantic-data-face ((t (:foreground "#f99"))))
  '(idris-semantic-function-face ((t (:foreground "#de8"))))
  '(idris-semantic-bound-face ((t (:foreground "#a9d"))))
+
+ ;; ansi-colors
+ '(ansi-color-blue ((t (:background "#8bf" :foreground "#8bf"))))
+ '(ansi-color-bright-black ((t (:background "gray80" :foreground "gray80"))))
+ '(ansi-color-bright-blue ((t (:background "#2bf" :foreground "#2bf"))))
+ '(ansi-color-bright-cyan ((t (:background "#4ff" :foreground "#4ff"))))
+ '(ansi-color-bright-green ((t (:background "#4f4" :foreground "#4f4"))))
+ '(ansi-color-bright-magenta ((t (:background "#f8f" :foreground "#f8f"))))
+ '(ansi-color-bright-red ((t (:background "#faa" :foreground "#faa"))))
+ '(ansi-color-bright-yellow ((t (:background "khaki1" :foreground "khaki1"))))
+ '(ansi-color-cyan ((t (:background "#8ff" :foreground "#8ff"))))
+ '(ansi-color-green ((t (:background "#8f8" :foreground "#8f8"))))
+ '(ansi-color-magenta ((t (:background "#fbf" :foreground "#fbf"))))
+ '(ansi-color-red ((t (:background "#fbb" :foreground "#fbb"))))
+ '(ansi-color-yellow ((t (:background "LightYellow1" :foreground "LightYellow1"))))
+
+ ;; mastodon.el
+ '(mastodon-display-name-face ((t (:foreground "lemon chiffon"))))
  )
 
 
